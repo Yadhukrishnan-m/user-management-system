@@ -1,0 +1,29 @@
+<% include('../layouts/header.ejs')%>
+
+<h1 style="text-align: center; color: #000; font-family: Arial, sans-serif;">Edit User Data</h1>
+
+<% if (typeof message !== 'undefined') { %>
+    <h4 style="text-align: center; color: #e74c3c;"><%=   message   %></h4>
+<% } %>
+
+<form action="" method="post" style="max-width: 400px; margin: 0 auto; padding: 20px; background-color: #ecf0f1; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); text-align: center;">
+    <input type="name" name="name" placeholder="Enter name" value="<%=user.name %>" required style="width: calc(100% - 22px); margin-bottom: 10px; padding: 8px; border: 1px solid #bdc3c7; border-radius: 4px; box-sizing: border-box;">
+
+    <input type="email" name="email" placeholder="Enter Email" value="<%=user.email %>" required style="width: calc(100% - 22px); margin-bottom: 10px; padding: 8px; border: 1px solid #bdc3c7; border-radius: 4px; box-sizing: border-box;">
+    <br>
+    <input type="text" name="mno" placeholder="Enter mobile number" value="<%=user.mobile %>" required style="width: calc(100% - 22px); margin-bottom: 20px; padding: 8px; border: 1px solid #bdc3c7; border-radius: 4px; box-sizing: border-box;">
+    <br>
+    <input type="hidden" name="id" value="<%=user._id %>">
+    <input type="submit" value="update-user  " style="width: 100%; height: 40px; font-size: 14px; background-color: #000; color: #fff; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">
+    <br><br>
+   
+</form>
+
+<button type="button" onclick="window.location.href='/home'"
+    style="display: block; margin: 0 auto;; width: 150px; height: 40px; font-size: 16px; background-color: #000; color: #fff; border: none; border-radius: 4px; cursor: pointer; margin: 20px auto;">
+    back
+    </button>
+
+
+<% include('../layouts/footer.ejs')%>
+
