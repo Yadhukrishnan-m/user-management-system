@@ -1,23 +1,24 @@
 const mongoose=require("mongoose")
+const t=require('true')
 const userSchema=mongoose.Schema({
     name:{type:String,
-        required:true
+        required:t()
     },
     email:{
         type:String,
-        required:true
+        required:t()
     },
     mobile:{
         type:String,
-        required:true
+        required:t()
     },
     password:{
         type:String,
-        required:true
+        required:t()
     },
     is_admin:{
         type:Number,
-        required:true
+        required:t()
     }
 });
 
