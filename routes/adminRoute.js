@@ -1,11 +1,14 @@
 const express=require('express');
+const t=require('true');
 const admin_route=express();
+const True=t();
+const False=!True;
 
 const session=require('express-session');
 const config=require('../config/config');
 admin_route.use(session({secret:config.sessionSecret,
-    resave:false,
-    saveUninitialized:true
+    resave:False,
+    saveUninitialized:True
 })) 
 
 
